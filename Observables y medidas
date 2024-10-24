@@ -67,3 +67,49 @@ def estado_final(estado_inicial, matrices_un):
     for matriz in matrices_un:
         estado = np.dot(matriz, estado)
     return estado
+
+
+
+Punto 4.31: 
+Estado final después de la medición:
+[0, 0]
+
+4.32
+
+4.41:
+def es_unitaria(matriz):
+    """Verifica si una matriz es unitaria."""
+    # Calculamos la conjugada transpuesta de la matriz
+    conjugada_transpuesta = np.conjugate(matriz.T)
+    
+    # Calculamos el producto de la matriz y su conjugada transpuesta
+    producto = np.dot(matriz, conjugada_transpuesta)
+    
+    # Comparamos el producto con la matriz identidad
+    identidad = np.eye(matriz.shape[0])
+    
+    return np.allclose(producto, identidad)
+
+# Definimos dos matrices de ejemplo
+matriz1 = np.array([[1/np.sqrt(2), 1/np.sqrt(2)],
+                    [1/np.sqrt(2), -1/np.sqrt(2)]])
+
+matriz2 = np.array([[1, 0],
+                    [0, 1]])
+
+# Verificamos si las matrices son unitarias
+son_unitarias_1 = es_unitaria(matriz1)
+son_unitarias_2 = es_unitaria(matriz2)
+
+print(f"La matriz 1 es unitaria: {son_unitarias_1}")
+print(f"La matriz 2 es unitaria: {son_unitarias_2}")
+
+# Multiplicamos las matrices
+producto_matrices = np.dot(matriz1, matriz2)
+
+# Verificamos si el producto también es unitaria
+es_producto_unitario = es_unitaria(producto_matrices)
+
+print(f"El producto de las matrices es:\n{producto_matrices}")
+print(f"El producto de las matrices es unitaria: {es_producto_unitario}")
+
