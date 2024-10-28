@@ -1,0 +1,22 @@
+# Proyecto de Cálculo de Probabilidades Cuánticas
+
+Este proyecto contiene un conjunto de funciones en Python que permiten calcular probabilidades en mecánica cuántica utilizando amplitudes 
+de estado. Se implementan funcionalidades para calcular probabilidades en posiciones específicas, transiciones entre estados y verificar 
+propiedades de matrices unitarias.
+
+
+## Descripción
+
+El código proporciona herramientas para realizar cálculos relacionados con la mecánica cuántica, incluyendo:
+
+- Cálculo de probabilidades en posiciones específicas.
+- Cálculo de probabilidades de transición entre estados.
+- Verificación de si una matriz es unitaria.
+- Cálculo de la media y varianza de observables.
+
+## Instalación
+
+Para utilizar este proyecto, asegúrate de tener instalado Python y las bibliotecas necesarias. Puedes instalar NumPy utilizando pip:
+
+```bash
+pip install numpy
